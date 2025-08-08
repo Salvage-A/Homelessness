@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homelessness Data Explorer</title>
+    <script>
+        function showChart() {
+            var selectBox = document.getElementById("reasonSelect");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var iframe = document.getElementById("chartFrame");
+            iframe.src = "assets/" + selectedValue + ".html";
+        }
+    </script>
+</head>
+<body>
+    <h1>Homelessness Data Explorer</h1>
+    <p>Select a reason to view the interactive chart:</p>
+    <select id="reasonSelect" onchange="showChart()">
+<option value="Domestic_abuse_-_victim">Domestic abuse – victim</option>
+<option value="End_of_private_rented_tenancy_-_assured_shorthold_tenancy">End of private rented tenancy – assured shorthold tenancy</option>
+<option value="End_of_private_rented_tenancy_-_not_assured_shorthold_tenancy">End of private rented tenancy - not assured shorthold tenancy</option>
+<option value="Family_no_longer_willing_or_able_to_accommodate">Family no longer willing or able to accommodate</option>
+<option value="Fire_or_flood_-_other_emergency">Fire or flood / other emergency</option>
+<option value="Friends_no_longer_willing_or_able_to_accommodate">Friends no longer willing or able to accommodate</option>
+<option value="Non-racially_motivated_-_other_motivated_violence_or_harassment">Non-racially motivated / other motivated violence or harassment</option>
+<option value="Not_known_due_to_last_settled_accommodation_Not_known">Not known due to last settled accommodation Not known</option>
+<option value="Other_Retired">Other (Retired)</option>
+<option value="Racially_motivated_violence_or_harassment">Racially motivated violence or harassment</option>
+<option value="Relationship_with_partner_ended_non-violent_breakdown">Relationship with partner ended (non-violent breakdown)</option>
+
+    </select>
+    <br><br>
+    <iframe id="chartFrame" src="" width="100%" height="600px" style="border:none;"></iframe>
+</body>
+</html>
